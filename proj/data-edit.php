@@ -31,7 +31,7 @@
                     <h5 class="card-title">修改資料</h5>
 
                     <form name="form1" onsubmit="checkForm(); return false;">
-                        <input type="hidden" name="sid" value="<?= $r['sid'] ?>">   
+                        <input type="hidden" name="sid" value="<?= $r['sid'] ?>">
                         <div class="form-group">
                             <label for="name">姓名 *</label>
                             <input type="text" class="form-control" id="name" name="name"
@@ -58,7 +58,8 @@
                         </div>
                         <div class="form-group">
                             <label for="address">address</label>
-                            <textarea class="form-control" id="address" name="address" cols="30" rows="3"><?= htmlentities($r['address']) ?></textarea>
+                            <textarea class="form-control" id="address" name="address" cols="30" rows="3"
+                                ><?= htmlentities($r['address']) ?></textarea>
                             <small class="form-text "></small>
                         </div>
 
@@ -111,7 +112,7 @@
                 .then(obj=>{
                     console.log(obj);
                     if(obj.success){
-                        location.href = 'data-list.php';
+                        alert('修改成功');
                     } else {
                         alert(obj.error);
                     }

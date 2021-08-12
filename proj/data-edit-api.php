@@ -42,12 +42,12 @@ if(! filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
 
 $sql = "UPDATE `address_book` SET 
-                            `name`=?,
-                            `email`=?,
-                            `mobile`=?,
-                            `birthday`=?,
-                            `address`=?
-                            WHERE `sid`=?";
+                        `name`=?,
+                        `email`=?,
+                        `mobile`=?,
+                        `birthday`=?,
+                        `address`=?
+                        WHERE `sid`=?";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
@@ -68,3 +68,4 @@ if($stmt->rowCount()==1){
 }
 
 echo json_encode($output);
+

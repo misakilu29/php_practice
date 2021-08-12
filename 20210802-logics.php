@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>
+<?php
+
+$a = 1.2;
+
+var_dump($a);
+echo '<br>';
+
+
+var_dump(7 && 5); // 邏輯運算子的結果一定是 bool
+echo '<br>';
+var_dump(7 and 5); // 邏輯運算子的結果一定是 bool
+echo '<br>';
+
+$b = 7 || 5; // &&, || 優先權比等號要高
+var_dump($b);
+echo '<br>';
+
+$c = 7 or 5; // and, or 優先權比等號要低
+var_dump($c);
+echo '<br>';
+
+?>
+</h2>
+</body>
+</html>
